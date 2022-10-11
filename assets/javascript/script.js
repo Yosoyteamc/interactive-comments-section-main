@@ -264,7 +264,7 @@ function initVaribles(){
             element.nextElementSibling.value = score;
             let id = element.parentElement.parentElement.parentElement.parentElement.parentElement.id
             id = id.replace("sec-comment-","");
-            console.log(score);
+           // console.log(score);
             updateScore(id,score);
         });
     });
@@ -273,12 +273,12 @@ function initVaribles(){
         element.addEventListener('click',()=>{
             let score = element.previousElementSibling.value;
             score--;
-            if(score<=0){score=0;}
             element.previousElementSibling.value = score;
             let id = element.parentElement.parentElement.parentElement.parentElement.parentElement.id
             id = id.replace("sec-comment-","");
-            console.log(score);
+           // console.log(score);
             updateScore(id,score);
+            element.removeEventListener('click', this);
         });
     });
 
